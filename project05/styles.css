@@ -77,6 +77,10 @@ main {
       font-weight: 600;
     }
 
+    & .follow:hover {
+      cursor: pointer;
+    }
+
     & section {
       width: 100%;
     }
