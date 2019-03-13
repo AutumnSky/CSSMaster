@@ -1,0 +1,142 @@
+:root {
+  --gap: 10px;
+  --colorMain: red;
+  --lineHeight: 10px;
+}
+
+.grid {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(120px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: var(--gap);
+  grid-auto-flow: column;
+}
+
+.mainchild {
+  grid-row: span 3;
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  & .mainline {
+    background-color: var(--colorMain);
+    height: var(--lineHeight);
+    width: 50%;
+  }
+
+  & h1 {
+    color: var(--colorMain);
+    transform: rotate(-90deg) translateY(-70%);
+    font-size: 5rem;
+    font-weight: 800;
+  }
+
+  & .diagonal {
+    background-color: yellow;
+    width: 100%;
+    height: 50%;
+    background: repeating-linear-gradient(-45deg, white, white 10px, gray 10px, gray 12px);
+  }
+}
+
+.line {
+  width: 100%;
+  height: var(--lineHeight);
+  background-color: black;
+  margin-bottom: 1rem;
+}
+
+.child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & .title {
+    & .number {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 0.3rem;
+    }
+
+    & h3 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+
+  & .footer {
+    & .footer__title {
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin-bottom: 0.3rem;
+    }
+
+    & .footer__content {
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: gray;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.child5 {
+  grid-row: span 3;
+  grid-column: span 2;
+}
+
+.child11 {
+  grid-column: span 2;
+}
+
+.child5 {
+  height: 100%;
+
+  & .child5__container {
+    flex-grow: 1;
+  }
+
+  & .image {
+    flex-basis: 40%;
+  }
+}
+
+.image {
+  background-image: linear-gradient(to bottom, #ff000053, #ff000053),
+    url(https://images.unsplash.com/photo-1533629663071-038eb2b96fcf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.child11 {
+  justify-content: flex-start;
+}
+
+.wide__container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+
+  & .number {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+  }
+
+  & .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.child5 {
+  & .wide__container {
+    height: unset;
+    flex-grow: 1;
+  }
+}
