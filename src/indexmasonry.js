@@ -1,7 +1,7 @@
 /* ref: https://medium.com/@andybarefoot/a-masonry-style-layout-using-css-grid-8c663d355ebb */
 let grid;
 let allItems;
-let container;
+
 function resizeGridItem(item) {
   rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
   rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
@@ -17,13 +17,10 @@ function resizeAllGridItems() {
 
 function init() {
   grid = document.getElementById('grid');
-  allItems = document.getElementsByClassName('item');
-  container = document.getElementById('container');
+  allItems = document.getElementsByTagName('article');
+  console.log(grid);
+  console.log(allItems);
   resizeAllGridItems();
-
-  // container.style.height = grid.clientHeight + 'px';
-  var rect = grid.getBoundingClientRect();
-  container.style.height = rect.bottom + 'px';
 }
 
 window.onload = init;

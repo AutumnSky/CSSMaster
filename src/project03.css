@@ -3,9 +3,13 @@ body {
   height: 100vh;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+}
+
 body .container {
   background-color: white;
-  min-height: 100%;
   max-width: 500px;
   padding: 30px;
 }
