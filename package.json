@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel src/index.html",
+    "build": "rm -rf dist && parcel build src/index.html --public-url /CSSMaster/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,9 @@
     }
   },
   "devDependencies": {
+    "cssnano": "^4.1.10",
+    "gh-pages": "^2.0.1",
     "postcss-preset-env": "^6.6.0"
-  }
+  },
+  "homepage": "https://autumnsky.github.io/CSSMaster/"
 }
