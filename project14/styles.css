@@ -51,6 +51,7 @@ header {
     border-radius: 5px;
   }
 
+  /*ref: https://www.abeautifulsite.net/css-drop-caps */
   & .contet {
     word-wrap: break-word;
     word-break: break-all;
